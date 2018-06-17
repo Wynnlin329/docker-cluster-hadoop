@@ -8,7 +8,7 @@ WORKDIR /root
 RUN apt-get update && apt-get install -y openssh-server openjdk-8-jdk wget
 
 # install hadoop 2.7.2
-RUN wget https://github.com/orozcohsu/hadoop-source/2.7.3/hadoop-2.7.3.tar.gz && \
+RUN wget https://archive.apache.org/dist/hadoop/core/hadoop-2.7.3/hadoop-2.7.3.tar.gz && \
     tar -xzvf hadoop-2.7.3.tar.gz && \
     mv hadoop-2.7.3 /opt/hadoop && \
     rm hadoop-2.7.3.tar.gz
