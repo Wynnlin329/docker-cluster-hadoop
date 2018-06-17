@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 
 MAINTAINER orozcohsu <orozcohsu@hotmail.com>
 
@@ -44,7 +44,7 @@ RUN chmod +x ~/start-hadoop.sh && \
     chmod +x $HADOOP_HOME/sbin/start-yarn.sh 
 
 # format namenode
-RUN /usr/local/hadoop/bin/hdfs namenode -format
+RUN /opt/hadoop/bin/hdfs namenode -format
 
-CMD [ "sh", "-c", "service ssh start; bash"]
+CMD [ "sh", "-c", "systemctl start ssh; bash"]
 
