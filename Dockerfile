@@ -16,7 +16,7 @@ RUN wget https://archive.apache.org/dist/hadoop/core/hadoop-2.7.3/hadoop-2.7.3.t
 # set environment variable
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 
 ENV HADOOP_HOME=/opt/hadoop 
-ENV PATH=$PATH:/opt/bin:/opt/hadoop/sbin 
+ENV PATH=$PATH:/usr/bin:/opt/hadoop/sbin:/opt/hadoop/bin 
 
 # ssh without key
 RUN ssh-keygen -t rsa -f ~/.ssh/id_rsa -P '' && \
