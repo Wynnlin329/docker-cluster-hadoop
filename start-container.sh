@@ -16,16 +16,16 @@ sudo docker run -itd \
                 orozcohsu/hadoop:v1 &> /dev/null
 
 
-# start hadoop slave container
+# start hadoop slaver container
 i=1
 while [ $i -lt $N ]
 do
-	sudo docker rm -f slave$i &> /dev/null
-	echo "start slave$i container..."
+	sudo docker rm -f slaver$i &> /dev/null
+	echo "start slaver$i container..."
 	sudo docker run -itd \
 	                --net=hadoop \
-	                --name slave$i \
-	                --hostname slave$i \
+	                --name slaver$i \
+	                --hostname slaver$i \
 	                orozcohsu/hadoop:v1 &> /dev/null
 	i=$(( $i + 1 ))
 done 
