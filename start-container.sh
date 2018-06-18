@@ -13,7 +13,7 @@ sudo docker run -itd \
                 -p 8088:8088 \
                 --name master \
                 --hostname master \
-                orozcohsu/hadoop:v1 &> /dev/null
+                orozcohsu/cluster-hadoop:v1 &> /dev/null
 
 
 # start hadoop slaver container
@@ -26,7 +26,7 @@ do
 	                --net=hadoop \
 	                --name slaver$i \
 	                --hostname slaver$i \
-	                orozcohsu/hadoop:v1 &> /dev/null
+	                orozcohsu/cluster-hadoop:v1 &> /dev/null
 	i=$(( $i + 1 ))
 done 
 

@@ -46,5 +46,5 @@ RUN chmod +x ~/start-hadoop.sh && \
 # format namenode
 RUN /opt/hadoop/bin/hdfs namenode -format
 
-CMD [ "sh", "-c", "systemctl start ssh; bash"]
+CMD [ "sh", "-c", "/etc/init.d/ssh start; bash"]
 

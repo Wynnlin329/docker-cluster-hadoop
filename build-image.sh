@@ -3,6 +3,6 @@
 echo ""
 
 echo -e "\nbuild docker hadoop image\n"
-sudo docker build -t orozcohsu/hadoop:v1 .
+sudo docker build -t orozcohsu/cluster-hadoop:v1 .
 
 echo ""
